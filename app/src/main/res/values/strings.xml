@@ -1,3 +1,10 @@
 <resources>
     <string name="app_name">CardVerifier</string>
+    <string name="enter_card_serials">Enter Card Serials</string>
+    <string name="card_scheme_title">Card Scheme</string>
+    <string name="bank_title">Bank</string>
+    <string name="card_number_length_title">Card Number Length</string>
+    <string name="prepaid_title">Prepaid</string>
+    <string name="card_type_title">Card Type</string>
+    <string name="country_title">Country</string>
 </resources>
