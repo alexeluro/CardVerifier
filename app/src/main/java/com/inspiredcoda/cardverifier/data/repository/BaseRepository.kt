@@ -12,7 +12,7 @@ abstract class BaseRepository {
             return request.body()
         }else{
 
-            throw ApiException("An error occurred!")
+            throw ApiException("Error fetching card details!")
 
         }
 

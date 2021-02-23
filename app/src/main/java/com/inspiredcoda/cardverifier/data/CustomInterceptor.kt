@@ -10,7 +10,7 @@ import okhttp3.Response
 class CustomInterceptor(private val context: Context): Interceptor{
     override fun intercept(chain: Interceptor.Chain): Response {
 
-        if (isInternetAvailable()){
+        if (!isInternetAvailable()){
             throw NoInternetException("Check you Internet Connection and try again")
         }
         return chain.proceed(chain.request())

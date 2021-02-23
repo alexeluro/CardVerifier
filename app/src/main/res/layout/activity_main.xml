@@ -19,12 +19,16 @@
         >
 
         <EditText
+            android:id="@+id/main_serial_input"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/main_serial_input"
+            android:layout_margin="25dp"
+            android:fontFamily="monospace"
+            android:gravity="center"
             android:hint="@string/enter_card_serials"
-            android:layout_marginBottom="10dp"
-            />
+            android:inputType="number"
+            android:maxLength="9"
+            android:textSize="20sp" />
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -183,5 +187,18 @@
 
 
     </LinearLayout>
+
+
+    <ProgressBar
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/main_progress_bar"
+        android:visibility="gone"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

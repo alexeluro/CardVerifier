@@ -5,6 +5,7 @@ import android.content.Context
 import com.facebook.stetho.okhttp3.StethoInterceptor
 import com.inspiredcoda.cardverifier.data.Api
 import com.inspiredcoda.cardverifier.data.CustomInterceptor
+import com.inspiredcoda.cardverifier.utils.Constant.Remote.BASE_URL
 import com.jakewharton.retrofit2.adapter.kotlin.coroutines.CoroutineCallAdapterFactory
 import dagger.Module
 import dagger.Provides
@@ -34,7 +35,7 @@ class AppModule {
                 .build()
 
         return Retrofit.Builder()
-                .baseUrl("https://delivrr-api.herokuapp.com/")
+                .baseUrl(BASE_URL)
                 .addConverterFactory(GsonConverterFactory.create())
                 .addCallAdapterFactory(CoroutineCallAdapterFactory.invoke())
                 .client(client)
