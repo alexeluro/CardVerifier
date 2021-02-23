@@ -18,6 +18,7 @@ class MainActivity : AppCompatActivity(), ResultStateCallback {
 
     private val mainViewModel: MainViewModel by viewModels()
 
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
@@ -34,26 +35,28 @@ class MainActivity : AppCompatActivity(), ResultStateCallback {
             }
 
             override fun afterTextChanged(value: Editable?) {
+
                 if ((!value.isNullOrEmpty()) && value.toString().length > 3){
                     mainViewModel.setCardDetails(value.toString(), this@MainActivity)
                 }
+
             }
         })
 
     }
 
-    private fun setValues(cardResponse: CardDetailsResponse){
-        main_bank_text.text = cardResponse.bank?.name ?: ""
+    private fun setValues(cardResponse: CardDetailsResponse) {
+        main_bank_text.text = cardResponse.bank?.name ?: "???"
         main_card_number_length_text.text = cardResponse.number?.length.toString()
-        main_card_scheme_text.text = cardResponse.scheme ?: ""
-        main_card_type.text = cardResponse.type ?: ""
-        main_country.text = cardResponse.country?.name ?: ""
+        main_card_scheme_text.text = cardResponse.scheme ?: "???"
+        main_card_type.text = cardResponse.type ?: "???"
+        main_country.text = cardResponse.country?.name ?: "???"
         main_prepaid_text.text = if (cardResponse.prepaid) "Yes" else "No"
     }
 
-    private fun observer(){
-        mainViewModel.cardDetailsLive.observe(this){
-            if (it != null){
+    private fun observer() {
+        mainViewModel.cardDetailsLive.observe(this) {
+            if (it != null) {
                 setValues(it)
             }
         }

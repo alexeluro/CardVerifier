@@ -13,25 +13,26 @@ import kotlinx.coroutines.launch
 
 class MainViewModel @ViewModelInject constructor(
         private val repository: MainRepository
-): ViewModel() {
+) : ViewModel() {
 
     private var _cardDetails = MutableLiveData<CardDetailsResponse>()
     val cardDetailsLive: LiveData<CardDetailsResponse>
         get() = _cardDetails
 
 
-    fun setCardDetails(serials: String, callback: ResultStateCallback){
+    fun setCardDetails(serials: String, callback: ResultStateCallback) {
         viewModelScope.launch {
             try {
                 callback.onLoading()
                 _cardDetails.postValue(repository.getCardDetails(serials))
                 callback.onSuccess("checked successfully...")
-            }catch (e: NoInternetException){
+            } catch (e: NoInternetException) {
                 callback.onFailure(e.message)
-            }catch (e: ApiException){
+            } catch (e: ApiException) {
                 callback.onFailure(e.message)
             }
         }
     }
+
 
 }

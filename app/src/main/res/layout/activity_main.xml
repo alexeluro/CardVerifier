@@ -57,7 +57,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:id="@+id/main_card_scheme_text"
-                        android:text=""
+                        android:text="\???"
                         style="@style/AppTheme.TextStyle"
                         />
 
@@ -79,7 +79,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:id="@+id/main_bank_text"
-                        android:text=""
+                        android:text="\???"
                         style="@style/AppTheme.TextStyle"
                         />
 
@@ -101,7 +101,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:id="@+id/main_card_number_length_text"
-                        android:text=""
+                        android:text="\???"
                         style="@style/AppTheme.TextStyle"
                         />
 
@@ -123,7 +123,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:id="@+id/main_prepaid_text"
-                        android:text=""
+                        android:text="\???"
                         style="@style/AppTheme.TextStyle"
                         />
 
@@ -153,7 +153,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:id="@+id/main_card_type"
-                        android:text=""
+                        android:text="\???"
                         style="@style/AppTheme.TextStyle"
                         />
 
@@ -175,7 +175,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:id="@+id/main_country"
-                        android:text=""
+                        android:text="\???"
                         style="@style/AppTheme.TextStyle"
                         />
 
